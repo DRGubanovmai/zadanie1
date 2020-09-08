@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+//Compiler version g++ 6.3.0
+
+int main()
+{
+    int numList; 
+    int maxVariant;
+    char name[20];
+    char surname[45];
+    cout << "Input number of list students"<< endl;
+    cin >> numList;
+    cout << "Input count of variants"<<endl;
+    cin >> maxVariant;
+    cout << "Input name"<<endl;
+    cin >> name;
+    cout << "Input surname" << endl;
+    cin >> surname;
+    
+    cout << "1: " << numList % maxVariant<< endl;
+    cout << "2: " << name[0] % maxVariant<< endl;
+    cout << "3: " << surname[0] % maxVariant<< endl;
+    return 0;
+}
