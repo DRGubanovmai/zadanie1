@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {	
+	int width;
+	int height;
+	int num;
+	char symbol = '*';
+	char space = ' ';
+
+	cout << "Input width:" << endl;
+	cin >> width;
+	cout << "Input height" << endl;
+	cin >> height;
+
+	for (int i = 0; i < height; i++) {
+		for (int i = 0; i < width; i++) {
+			cout << symbol;
+		}
+		cout << endl;
+	}
+
+	cout << "Input num" << endl;
+	cin >> num;
+
+	int start = 1;
+	for (int i = 0; i < num; i++) {
+		if (num % 2 == 1) {
+			if (i % 2 == 0) {
+				for (int i = 0; i < (num - start) / 2; i++) {
+					cout << space;
+				}
+				for (int i = 0; i < start; i++) {
+					cout << symbol;
+				}
+			}
+			start++;
+		}
+		
+		if (num % 2 == 0) {
+			if (i % 2 == 1) {
+				for (int i = 0; i < (num - start) / 2; i++) {
+					cout << space;
+				}
+				for (int i = 0; i < start; i++) {
+					cout << symbol;
+				}
+			}
+			start++;
+		}
+		cout << endl;
+	}
+	return 0;
+}
